@@ -15,6 +15,7 @@ export function Footer() {
             </div>
           </div>
           <div className="flex flex-wrap gap-6 text-xs font-semibold uppercase tracking-widest text-brand-silver">
+            <a href="/about" className="hover:text-white">About</a>
             <a href="#services" className="hover:text-white">Services</a>
             <a href="#pricing" className="hover:text-white">Pricing</a>
             <a href="#gallery" className="hover:text-white">Gallery</a>

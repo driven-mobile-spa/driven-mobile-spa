@@ -3,6 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Hero } from "@/components/site/Hero";
 import { Fleet } from "@/components/site/Fleet";
+import { AboutTeaser } from "@/components/site/AboutTeaser";
 import { Services } from "@/components/site/Services";
 import { WhyUs } from "@/components/site/WhyUs";
 import { Pricing } from "@/components/site/Pricing";
@@ -24,6 +25,7 @@ function Home() {
       <main>
         <Hero />
         <Fleet />
+        <AboutTeaser />
         <Services />
         <WhyUs />
         <Pricing />
