@@ -4,7 +4,10 @@ import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   return (
-    <section id="top" className="relative flex min-h-[100svh] items-center overflow-hidden pt-16 sm:pt-20">
+    <section
+      id="top"
+      className="relative flex min-h-[100svh] items-center overflow-hidden pt-16 sm:pt-20"
+    >
       <div className="absolute inset-0 z-0">
         <img
           src={heroImg}
@@ -37,8 +40,8 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-brand-silver sm:text-lg">
-            Mobile car wash & detailing for homes, corporates, and fleets across Cape Town.
-            From Melkbosstrand to Constantia — we bring the studio to your driveway.
+            Mobile car wash & detailing for homes, corporates, and fleets across Cape Town. From
+            Melkbosstrand to Constantia — we bring the studio to your driveway.
           </p>
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4">

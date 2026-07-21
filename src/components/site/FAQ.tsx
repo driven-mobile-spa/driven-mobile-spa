@@ -16,7 +16,11 @@ export function FAQ() {
 
         <div className="divide-y divide-white/10 rounded-3xl border border-white/10 bg-white/[0.02]">
           {faqs.map((f, i) => (
-            <details key={i} data-reveal className="group px-6 py-5 sm:px-8 [&_summary::-webkit-details-marker]:hidden">
+            <details
+              key={i}
+              data-reveal
+              className="group px-6 py-5 sm:px-8 [&_summary::-webkit-details-marker]:hidden"
+            >
               <summary className="flex cursor-pointer list-none items-center justify-between gap-6">
                 <span className="text-base font-semibold sm:text-lg">{f.q}</span>
                 <span className="grid size-8 shrink-0 place-items-center rounded-full border border-white/15 text-brand-blue transition-transform group-open:rotate-45">

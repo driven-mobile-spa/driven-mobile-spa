@@ -45,10 +45,16 @@ export function WhyUs() {
         </div>
 
         <div>
-          <div data-reveal className="mb-4 text-[10px] font-bold uppercase tracking-[0.3em] text-brand-blue">
+          <div
+            data-reveal
+            className="mb-4 text-[10px] font-bold uppercase tracking-[0.3em] text-brand-blue"
+          >
             Why Choose Us
           </div>
-          <h2 data-reveal className="mb-10 text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl md:text-5xl">
+          <h2
+            data-reveal
+            className="mb-10 text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl md:text-5xl"
+          >
             A professional studio
             <br />
             <span className="text-brand-blue">on wheels.</span>

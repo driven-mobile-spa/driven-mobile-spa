@@ -74,7 +74,8 @@ export function Contact() {
             Ready for a showroom finish?
           </h2>
           <p className="mt-4 text-brand-silver">
-            Fill in the form and we'll confirm your booking on WhatsApp within 30 minutes during business hours.
+            Fill in the form and we'll confirm your booking on WhatsApp within 30 minutes during
+            business hours.
           </p>
         </div>
 
@@ -218,20 +219,45 @@ export function Contact() {
 
           {/* Info + map */}
           <div className="space-y-6">
-            <div data-reveal className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 sm:p-8">
-              <h3 className="text-xs font-bold uppercase tracking-widest text-brand-blue">Get in touch</h3>
+            <div
+              data-reveal
+              className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 sm:p-8"
+            >
+              <h3 className="text-xs font-bold uppercase tracking-widest text-brand-blue">
+                Get in touch
+              </h3>
               <ul className="mt-6 space-y-5 text-sm">
-                <InfoRow icon={Phone} label="Phone" value={site.phone} href={`tel:${site.phone.replace(/\s/g, "")}`} />
-                <InfoRow icon={MessageCircle} label="WhatsApp" value={`+${site.whatsapp}`} href={`https://wa.me/${site.whatsapp}`} />
-                <InfoRow icon={Mail} label="Email" value={site.email} href={`mailto:${site.email}`} />
+                <InfoRow
+                  icon={Phone}
+                  label="Phone"
+                  value={site.phone}
+                  href={`tel:${site.phone.replace(/\s/g, "")}`}
+                />
+                <InfoRow
+                  icon={MessageCircle}
+                  label="WhatsApp"
+                  value={`+${site.whatsapp}`}
+                  href={`https://wa.me/${site.whatsapp}`}
+                />
+                <InfoRow
+                  icon={Mail}
+                  label="Email"
+                  value={site.email}
+                  href={`mailto:${site.email}`}
+                />
                 <InfoRow icon={MapPin} label="Based in" value={site.address} />
                 <InfoRow icon={Clock} label="Hours" value={site.hours} />
               </ul>
               <div className="mt-6 border-t border-white/10 pt-6">
-                <div className="text-xs font-bold uppercase tracking-widest text-brand-silver">Areas covered</div>
+                <div className="text-xs font-bold uppercase tracking-widest text-brand-silver">
+                  Areas covered
+                </div>
                 <div className="mt-3 flex flex-wrap gap-1.5">
                   {site.serviceAreas.map((a) => (
-                    <span key={a} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-silver">
+                    <span
+                      key={a}
+                      className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-silver"
+                    >
                       {a}
                     </span>
                   ))}
@@ -239,7 +265,10 @@ export function Contact() {
               </div>
             </div>
 
-            <div data-reveal className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02]">
+            <div
+              data-reveal
+              className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02]"
+            >
               <iframe
                 title="Driven Mobilespa service area"
                 src={site.googleMapsEmbedSrc}
@@ -274,7 +303,9 @@ function Field({
 }) {
   return (
     <label className={`flex flex-col gap-2 ${className}`}>
-      <span className="text-[10px] font-bold uppercase tracking-widest text-brand-silver">{label}</span>
+      <span className="text-[10px] font-bold uppercase tracking-widest text-brand-silver">
+        {label}
+      </span>
       {children}
       {error && <span className="text-xs text-red-300">{error}</span>}
     </label>
@@ -298,7 +329,9 @@ function InfoRow({
         <Icon className="size-4" />
       </div>
       <div className="min-w-0">
-        <div className="text-[10px] font-bold uppercase tracking-widest text-brand-silver">{label}</div>
+        <div className="text-[10px] font-bold uppercase tracking-widest text-brand-silver">
+          {label}
+        </div>
         <div className="truncate font-medium">{value}</div>
       </div>
     </>
@@ -306,7 +339,10 @@ function InfoRow({
   return (
     <li>
       {href ? (
-        <a href={href} className="flex items-center gap-4 rounded-lg -m-2 p-2 transition-colors hover:bg-white/5">
+        <a
+          href={href}
+          className="flex items-center gap-4 rounded-lg -m-2 p-2 transition-colors hover:bg-white/5"
+        >
           {inner}
         </a>
       ) : (

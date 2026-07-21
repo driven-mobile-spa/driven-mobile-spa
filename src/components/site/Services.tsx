@@ -6,7 +6,11 @@ export function Services() {
   return (
     <section id="services" className="scroll-mt-24 px-4 py-24 sm:px-6 sm:py-32">
       <div className="mx-auto max-w-7xl">
-        <div ref={ref} data-reveal className="mb-14 flex flex-col justify-between gap-6 sm:mb-16 md:flex-row md:items-end">
+        <div
+          ref={ref}
+          data-reveal
+          className="mb-14 flex flex-col justify-between gap-6 sm:mb-16 md:flex-row md:items-end"
+        >
           <div className="max-w-xl">
             <div className="mb-4 text-[10px] font-bold uppercase tracking-[0.3em] text-brand-blue">
               The Treatment

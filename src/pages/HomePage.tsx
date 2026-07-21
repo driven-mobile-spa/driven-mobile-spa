@@ -1,5 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
-
 import { Nav } from "@/components/site/Nav";
 import { Hero } from "@/components/site/Hero";
 import { Fleet } from "@/components/site/Fleet";
@@ -14,11 +12,7 @@ import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFab } from "@/components/site/WhatsAppFab";
 
-export const Route = createFileRoute("/")({
-  component: Home,
-});
-
-function Home() {
+export function HomePage() {
   return (
     <div className="min-h-screen bg-brand-black text-white">
       <Nav />

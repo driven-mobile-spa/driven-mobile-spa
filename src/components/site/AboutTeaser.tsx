@@ -2,7 +2,7 @@ import ownerImg from "@/assets/owner-lucky-dawood.jpg";
 import { site } from "@/config/site";
 import { useReveal } from "@/hooks/use-reveal";
 import { ArrowRight } from "lucide-react";
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 
 export function AboutTeaser() {
   const ref = useReveal<HTMLDivElement>();
@@ -29,13 +29,11 @@ export function AboutTeaser() {
             <h2 className="text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">
               Lucky Dawood
             </h2>
-            <p className="mt-3 text-lg font-medium text-brand-silver">
-              Founder & lead detailer
-            </p>
+            <p className="mt-3 text-lg font-medium text-brand-silver">Founder & lead detailer</p>
 
             <p className="mt-6 text-brand-silver">
-              Lucky is a passionate car cleaner who loves what he does. From a simple wash to a
-              full restoration, he treats every vehicle with care and pride — giving your car an
+              Lucky is a passionate car cleaner who loves what he does. From a simple wash to a full
+              restoration, he treats every vehicle with care and pride — giving your car an
               experience, not just a clean.
             </p>
 

@@ -13,7 +13,8 @@ export function Pricing() {
             Priced by vehicle. No surprises.
           </h2>
           <p className="mt-4 text-brand-silver">
-            Choose the plan that fits your vehicle class. Fleet and corporate packages priced on request.
+            Choose the plan that fits your vehicle class. Fleet and corporate packages priced on
+            request.
           </p>
         </div>
 
@@ -63,7 +64,10 @@ export function Pricing() {
           ))}
         </div>
 
-        <div data-reveal className="mt-8 flex flex-col items-start justify-between gap-6 rounded-3xl border border-white/10 bg-gradient-to-r from-brand-blue/15 to-transparent p-8 sm:p-10 md:flex-row md:items-center">
+        <div
+          data-reveal
+          className="mt-8 flex flex-col items-start justify-between gap-6 rounded-3xl border border-white/10 bg-gradient-to-r from-brand-blue/15 to-transparent p-8 sm:p-10 md:flex-row md:items-center"
+        >
           <div>
             <div className="text-[10px] font-bold uppercase tracking-widest text-brand-blue">
               Fleet & Corporate

@@ -1,45 +1,11 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFab } from "@/components/site/WhatsAppFab";
 import { AboutOwner } from "@/components/site/AboutOwner";
-import { site, siteUrl } from "@/config/site";
 
-export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: `About Us — ${site.businessName}` },
-      {
-        name: "description",
-        content:
-          "Meet Lucky Dawood, founder of Driven Mobilespa. A passionate Cape Town car detailer bringing premium mobile car wash and detailing to your home, office, or fleet.",
-      },
-      {
-        property: "og:title",
-        content: `About Us — ${site.businessName}`,
-      },
-      {
-        property: "og:description",
-        content:
-          "Meet Lucky Dawood, founder of Driven Mobilespa. Premium mobile car wash and detailing across Cape Town.",
-      },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: `${siteUrl}/about` },
-      { property: "og:site_name", content: site.businessName },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: `About Us — ${site.businessName}` },
-      {
-        name: "twitter:description",
-        content:
-          "Meet Lucky Dawood, founder of Driven Mobilespa. Premium mobile car wash and detailing across Cape Town.",
-      },
-    ],
-  }),
-  component: AboutPage,
-});
-
-function AboutPage() {
+export function AboutPage() {
   return (
     <div className="min-h-screen bg-brand-black text-white">
       <Nav />
@@ -92,8 +58,8 @@ function StoryValues() {
             <h3 className="mb-3 text-xl font-bold">The trailer</h3>
             <p className="text-sm leading-relaxed text-brand-silver">
               To bring that same studio-quality finish anywhere, Lucky built a custom mobile
-              detailing trailer — water tank, pressure washer, generator, and pro-grade chemicals
-              on board. The workshop now goes wherever it is needed.
+              detailing trailer — water tank, pressure washer, generator, and pro-grade chemicals on
+              board. The workshop now goes wherever it is needed.
             </p>
           </article>
 

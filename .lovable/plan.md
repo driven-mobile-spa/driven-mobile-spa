@@ -1,4 +1,3 @@
-
 ## Driven Mobilespa — static premium site (GitHub Pages ready)
 
 Single-page Midnight Cinematic Luxe site with **no backend**. All contact details, links, form endpoints, and gallery images come from config — no hardcoded placeholders scattered through components.
@@ -16,30 +15,37 @@ const env = import.meta.env;
 
 export const site = {
   businessName: env.VITE_BUSINESS_NAME ?? "Driven Mobilespa",
-  phone:        env.VITE_BUSINESS_PHONE ?? "+27 00 000 0000",
-  whatsapp:     env.VITE_WHATSAPP_NUMBER ?? "27000000000",   // intl, no +
-  email:        env.VITE_BUSINESS_EMAIL ?? "hello@driven-mobilespa.com",
+  phone: env.VITE_BUSINESS_PHONE ?? "+27 00 000 0000",
+  whatsapp: env.VITE_WHATSAPP_NUMBER ?? "27000000000", // intl, no +
+  email: env.VITE_BUSINESS_EMAIL ?? "hello@driven-mobilespa.com",
 
-  googleReviewsUrl:      env.VITE_GOOGLE_REVIEWS_URL ?? "",
-  googleWriteReviewUrl:  env.VITE_GOOGLE_WRITE_REVIEW_URL ?? "",
-  googleMapsEmbedSrc:    env.VITE_GOOGLE_MAPS_EMBED_SRC ?? "",
+  googleReviewsUrl: env.VITE_GOOGLE_REVIEWS_URL ?? "",
+  googleWriteReviewUrl: env.VITE_GOOGLE_WRITE_REVIEW_URL ?? "",
+  googleMapsEmbedSrc: env.VITE_GOOGLE_MAPS_EMBED_SRC ?? "",
 
   booking: {
     googleFormAction: env.VITE_GOOGLE_FORM_ACTION ?? "",
     fields: {
-      name:     env.VITE_GF_FIELD_NAME     ?? "entry.0",
-      phone:    env.VITE_GF_FIELD_PHONE    ?? "entry.0",
-      email:    env.VITE_GF_FIELD_EMAIL    ?? "entry.0",
-      vehicle:  env.VITE_GF_FIELD_VEHICLE  ?? "entry.0",
-      size:     env.VITE_GF_FIELD_SIZE     ?? "entry.0",
-      service:  env.VITE_GF_FIELD_SERVICE  ?? "entry.0",
-      date:     env.VITE_GF_FIELD_DATE     ?? "entry.0",
+      name: env.VITE_GF_FIELD_NAME ?? "entry.0",
+      phone: env.VITE_GF_FIELD_PHONE ?? "entry.0",
+      email: env.VITE_GF_FIELD_EMAIL ?? "entry.0",
+      vehicle: env.VITE_GF_FIELD_VEHICLE ?? "entry.0",
+      size: env.VITE_GF_FIELD_SIZE ?? "entry.0",
+      service: env.VITE_GF_FIELD_SERVICE ?? "entry.0",
+      date: env.VITE_GF_FIELD_DATE ?? "entry.0",
       location: env.VITE_GF_FIELD_LOCATION ?? "entry.0",
-      notes:    env.VITE_GF_FIELD_NOTES    ?? "entry.0",
+      notes: env.VITE_GF_FIELD_NOTES ?? "entry.0",
     },
   },
 
-  serviceAreas: ["Melkbosstrand","Table View","Bloubergstrand","Century City","Atlantic Seaboard","Northern Suburbs"],
+  serviceAreas: [
+    "Melkbosstrand",
+    "Table View",
+    "Bloubergstrand",
+    "Century City",
+    "Atlantic Seaboard",
+    "Northern Suburbs",
+  ],
 };
 ```
 
@@ -97,4 +103,3 @@ This is a build-config change layered on top, not a rewrite — the app code sta
 - `src/hooks/use-reveal.ts` — scroll reveal
 - `src/lib/booking.ts` — form → iframe/mailto/whatsapp helpers
 - `src/assets/gallery/` — seeded with the generated before/after pair; drop more here anytime
-

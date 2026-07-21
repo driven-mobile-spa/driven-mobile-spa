@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { site } from "@/config/site";
 
 export function Footer() {
@@ -10,25 +11,53 @@ export function Footer() {
               D
             </span>
             <div>
-              <div className="text-sm font-extrabold uppercase italic tracking-tight">{site.businessName}</div>
+              <div className="text-sm font-extrabold uppercase italic tracking-tight">
+                {site.businessName}
+              </div>
               <div className="text-xs text-brand-silver">Premium mobile car care · Cape Town</div>
             </div>
           </div>
           <div className="flex flex-wrap gap-6 text-xs font-semibold uppercase tracking-widest text-brand-silver">
-            <a href="/about" className="hover:text-white">About</a>
-            <a href="#services" className="hover:text-white">Services</a>
-            <a href="#pricing" className="hover:text-white">Pricing</a>
-            <a href="#gallery" className="hover:text-white">Gallery</a>
-            <a href="#reviews" className="hover:text-white">Reviews</a>
-            <a href="#contact" className="hover:text-white">Contact</a>
+            <Link to="/about" className="hover:text-white">
+              About
+            </Link>
+            <a href="#services" className="hover:text-white">
+              Services
+            </a>
+            <a href="#pricing" className="hover:text-white">
+              Pricing
+            </a>
+            <a href="#gallery" className="hover:text-white">
+              Gallery
+            </a>
+            <a href="#reviews" className="hover:text-white">
+              Reviews
+            </a>
+            <a href="#contact" className="hover:text-white">
+              Contact
+            </a>
           </div>
         </div>
         <div className="mt-10 flex flex-col-reverse items-start justify-between gap-3 border-t border-white/5 pt-6 text-[10px] uppercase tracking-widest text-brand-silver sm:flex-row sm:items-center">
-          <p>© {new Date().getFullYear()} {site.businessName}. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} {site.businessName}. All rights reserved.
+          </p>
           <div className="flex gap-5">
-            {site.socials.instagram && <a href={site.socials.instagram} className="hover:text-white">Instagram</a>}
-            {site.socials.facebook && <a href={site.socials.facebook} className="hover:text-white">Facebook</a>}
-            {site.googleReviewsUrl && <a href={site.googleReviewsUrl} className="hover:text-white">Google</a>}
+            {site.socials.instagram && (
+              <a href={site.socials.instagram} className="hover:text-white">
+                Instagram
+              </a>
+            )}
+            {site.socials.facebook && (
+              <a href={site.socials.facebook} className="hover:text-white">
+                Facebook
+              </a>
+            )}
+            {site.googleReviewsUrl && (
+              <a href={site.googleReviewsUrl} className="hover:text-white">
+                Google
+              </a>
+            )}
           </div>
         </div>
       </div>

@@ -1,0 +1,71 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          VITE_BUSINESS_NAME: ${{ vars.VITE_BUSINESS_NAME }}
+          VITE_BUSINESS_PHONE: ${{ vars.VITE_BUSINESS_PHONE }}
+          VITE_WHATSAPP_NUMBER: ${{ vars.VITE_WHATSAPP_NUMBER }}
+          VITE_BUSINESS_EMAIL: ${{ vars.VITE_BUSINESS_EMAIL }}
+          VITE_BUSINESS_ADDRESS: ${{ vars.VITE_BUSINESS_ADDRESS }}
+          VITE_GOOGLE_REVIEWS_URL: ${{ vars.VITE_GOOGLE_REVIEWS_URL }}
+          VITE_GOOGLE_WRITE_REVIEW_URL: ${{ vars.VITE_GOOGLE_WRITE_REVIEW_URL }}
+          VITE_GOOGLE_MAPS_EMBED_SRC: ${{ vars.VITE_GOOGLE_MAPS_EMBED_SRC }}
+          VITE_INSTAGRAM_URL: ${{ vars.VITE_INSTAGRAM_URL }}
+          VITE_FACEBOOK_URL: ${{ vars.VITE_FACEBOOK_URL }}
+          VITE_GOOGLE_FORM_ACTION: ${{ vars.VITE_GOOGLE_FORM_ACTION }}
+          VITE_GF_FIELD_NAME: ${{ vars.VITE_GF_FIELD_NAME }}
+          VITE_GF_FIELD_PHONE: ${{ vars.VITE_GF_FIELD_PHONE }}
+          VITE_GF_FIELD_EMAIL: ${{ vars.VITE_GF_FIELD_EMAIL }}
+          VITE_GF_FIELD_VEHICLE: ${{ vars.VITE_GF_FIELD_VEHICLE }}
+          VITE_GF_FIELD_SIZE: ${{ vars.VITE_GF_FIELD_SIZE }}
+          VITE_GF_FIELD_SERVICE: ${{ vars.VITE_GF_FIELD_SERVICE }}
+          VITE_GF_FIELD_DATE: ${{ vars.VITE_GF_FIELD_DATE }}
+          VITE_GF_FIELD_LOCATION: ${{ vars.VITE_GF_FIELD_LOCATION }}
+          VITE_GF_FIELD_NOTES: ${{ vars.VITE_GF_FIELD_NOTES }}
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

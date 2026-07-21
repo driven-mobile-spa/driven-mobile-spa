@@ -34,9 +34,16 @@ const shots = [
 export function Fleet() {
   const ref = useReveal<HTMLDivElement>();
   return (
-    <section id="fleet" className="scroll-mt-24 border-y border-white/5 bg-white/[0.02] px-4 py-24 sm:px-6 sm:py-32">
+    <section
+      id="fleet"
+      className="scroll-mt-24 border-y border-white/5 bg-white/[0.02] px-4 py-24 sm:px-6 sm:py-32"
+    >
       <div className="mx-auto max-w-7xl">
-        <div ref={ref} data-reveal className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+        <div
+          ref={ref}
+          data-reveal
+          className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end"
+        >
           <div className="max-w-xl">
             <div className="mb-4 text-[10px] font-bold uppercase tracking-[0.3em] text-brand-blue">
               Our Fleet
