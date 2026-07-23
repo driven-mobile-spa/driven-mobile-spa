@@ -12,10 +12,10 @@ export const site = {
   businessName: (env.VITE_BUSINESS_NAME as string) ?? "Driven Mobilespa",
   tagline: "Premium Mobile Car Wash & Detailing — Cape Town",
 
-  phone: (env.VITE_BUSINESS_PHONE as string) ?? "+27 00 000 0000",
+  phone: (env.VITE_BUSINESS_PHONE as string) ?? "+27 67 148 3241",
   /** International format, no leading + (e.g. "27821234567"). */
-  whatsapp: (env.VITE_WHATSAPP_NUMBER as string) ?? "27000000000",
-  email: (env.VITE_BUSINESS_EMAIL as string) ?? "hello@driven-mobilespa.com",
+  whatsapp: (env.VITE_WHATSAPP_NUMBER as string) ?? "27832281437",
+  email: (env.VITE_BUSINESS_EMAIL as string) ?? "contact@driven-mobilespa.com",
   address: (env.VITE_BUSINESS_ADDRESS as string) ?? "Melkbosstrand, Cape Town",
   hours: "Mon – Sat · 07:00 – 18:00",
 

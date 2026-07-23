@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { site, siteUrl } from "../config/site";
+import { priceSedanDisplay, priceSuvDisplay, priceLargeDisplay } from "../content/pricing";
 
 function NotFoundComponent() {
   return (
@@ -89,7 +90,16 @@ const jsonLd = {
     addressRegion: "Western Cape",
     addressCountry: "ZA",
   },
-  priceRange: "R450 – R3,500",
+  priceRange: (() => {
+    const prices = [
+      parseInt(import.meta.env.VITE_PRICE_SEDAN ?? "450", 10),
+      parseInt(import.meta.env.VITE_PRICE_SUV ?? "650", 10),
+      parseInt(import.meta.env.VITE_PRICE_LARGE ?? "650", 10),
+    ];
+    const min = Math.min(...prices);
+    const max = Math.max(...prices);
+    return `R${min} – R${max}`;
+  })(),
   openingHours: "Mo-Sa 07:00-18:00",
 };
 

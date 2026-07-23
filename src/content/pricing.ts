@@ -6,40 +6,48 @@ export interface PricingTier {
   features: string[];
 }
 
+const priceSedan = import.meta.env.VITE_PRICE_SEDAN ?? "250";
+const priceSuv = import.meta.env.VITE_PRICE_SUV ?? "280";
+const priceLarge = import.meta.env.VITE_PRICE_LARGE ?? "300";
+
+export const priceSedanDisplay = `R${priceSedan}`;
+export const priceSuvDisplay = `R${priceSuv}`;
+export const priceLargeDisplay = `R${priceLarge}`;
+
 export const pricingTiers: PricingTier[] = [
   {
-    name: "Sedan / Compact",
-    vehicle: "Hatch, sedan, small coupé",
-    price: "R450",
+    
+    name: "Essential Wash",
+    vehicle: "Hand wash • Dry • Interior Vacuum • Tyre Shine • Mag Clean",
+    price: `from ${priceSedanDisplay}`,
     features: [
-      "Foam pre-soak & hand wash",
-      "Wheels & tyres dressed",
-      "Interior vacuum & dust",
-      "Windows polished inside & out",
+      "Small- R150",
+      "Medium- R180",
+      "Large- R200",
     ],
   },
   {
-    name: "SUV / 4×4",
-    vehicle: "SUV, crossover, MPV",
-    price: "R650",
+
+    name: "Premium Wash",
+    vehicle: "Essential Wash + Polish & Wax • Leather Treatment • Extra Attention",
+    price: `from ${priceSuvDisplay}`,
     featured: true,
     features: [
-      "Everything in Sedan",
-      "Underbody rinse",
-      "Trim & plastics restored",
-      "Iron decontamination",
-      "Hand wax finish",
+      "Small- R250",
+      "Medium- R280",
+      "Large- R300"
     ],
   },
   {
-    name: "Bakkie / Large",
-    vehicle: "Double cab, van, 7-seater",
-    price: "R850",
+  
+    name: "Ultimate Detail",
+    vehicle: "Complete Interior & Exterior Detail • Deep Clean • Premium Finish",
+    price:  `from ${priceLargeDisplay}`,
     features: [
-      "Heavy-duty degrease",
-      "Load bed cleaned & dressed",
-      "Interior sanitisation",
-      "High-gloss wax finish",
+      "Small- R300",
+      "Medium- R350",
+      "Large- R400",
+      
     ],
   },
 ];
